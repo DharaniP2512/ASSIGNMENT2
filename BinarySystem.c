@@ -2,7 +2,7 @@
 #include <stdio.h>
 //NAME : Dharani Pamidimukkala
 //Scholar Id:2012137
-int binaryproduct(int bin1, int bin2)
+int binprod(int bin1, int bin2)
 {
     int i = 0, remainder = 0, sum[20];
     int binaryprod = 0;
@@ -25,7 +25,7 @@ int binaryproduct(int bin1, int bin2)
 int main()
 {
  
-    long bin1, bin2,multiply=0;
+    long b1, b2,multiply=0;
    
     int i = 0, remainder = 0, sum[20], digit, factor = 1;
  
@@ -39,15 +39,15 @@ int main()
       scanf("%d",&select);
       if(select==1){
            printf("Enter the first binary number: ");
-    scanf("%ld", &bin1);
+    scanf("%ld", &b1);
     printf("Enter the second binary number: ");
-    scanf("%ld", &bin2);
-    while (bin1 != 0 || bin2 != 0)
+    scanf("%ld", &b2);
+    while (b1 != 0 || b2 != 0)
     {
-        sum[i++] =(bin1 % 10 + bin2 % 10 + remainder) % 2;
-        remainder =(bin1 % 10 + bin2 % 10 + remainder) / 2;
-        bin1 = bin1 / 10;
-        bin2 = bin2 / 10;
+        sum[i++] =(b1 % 10 + b2 % 10 + remainder) % 2;
+        remainder =(b1 % 10 + b2 % 10 + remainder) / 2;
+        b1 = b1 / 10;
+        b2 = b2 / 10;
     }
     if (remainder != 0)
         sum[i++] = remainder;
@@ -60,20 +60,20 @@ int main()
 
       else if(select==2){
               printf("Enter the first binary number: ");
-    scanf("%ld", &bin1);
+    scanf("%ld", &b1);
     printf("Enter the second binary number: ");
-    scanf("%ld", &bin2);
-    while (bin2 != 0)
+    scanf("%ld", &b2);
+    while (b2 != 0)
     {
-        digit =  bin2 % 10;
+        digit =  b2 % 10;
         if (digit == 1)
         {
-            bin1 = bin1 * factor;
-            multiply = binaryproduct(bin1, multiply);
+            b1 = b1 * factor;
+            multiply = binprod(b1, multiply);
         }
         else
-            bin1 = bin1 * factor;
-        bin2 = bin2 / 10;
+            b1 = b1 * factor;
+        b2 = b2 / 10;
         factor = 10;
     }
     printf("Product of two binary numbers: %ld", multiply);
