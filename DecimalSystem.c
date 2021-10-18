@@ -5,24 +5,24 @@ int main()
 {
     while(1)
     {
-        int choice;
+        int option;
         printf("Select a choice: \n 1.Addition \n 2.Multiplication \n 3.Exit \n");
         printf("Enter a choice: ");
-        scanf("%d",&choice);
-        if(choice==1)
+        scanf("%d",&option);
+        if(option==1)
         {
-            long long int num1,num2;
+            long long int number1,number2;
             printf("Enter two decimal no.s: ");
-            scanf("%lld %lld", &num1,&num2);
-            long long int sum=num1+num2;
+            scanf("%lld %lld", &number1,&number2);
+            long long int sum=number1+number2;
             printf("Sum is: %lld \n",sum);
         }
-        else if(choice==2)
+        else if(option==2)
         {
-            long long int num1,num2;
+            long long int number1,number2;
             printf("Enter two decimal no.s: ");
-            scanf("%lld %lld",&num1,&num2);
-            printf("Product is: %lld \n",num1*num2);
+            scanf("%lld %lld",&number1,&number2);
+            printf("Product is: %lld \n",number1*number2);
         }
         else
         {
